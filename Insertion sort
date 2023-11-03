@@ -1,0 +1,29 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,n,num,a[20],t;
+	printf("enter limit=");
+	scanf("%d",&n);
+	printf("enter n arry lements=");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+		
+	}
+     	for(i=1;i<n;i++)
+     	{
+     	num=a[i];
+     	for(j=i-1;j>=0 && num<a[j];j--)
+     	{
+     		 t=a[j+1];
+     		 a[j+1]=a[j];
+     		 a[j]=t;
+     	}
+     
+a[j+1]=num;
+}
+printf("\n sortd nos=");
+for(i=0;i<n;i++)
+
+printf("%d\t",a[i]);
+}
